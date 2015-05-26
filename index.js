@@ -1,6 +1,6 @@
 var http = require("http");
 var port = 3030;
-var serverUrl = "192.168.1.91";
+var serverUrl = "localhost";
 
 var Twit = require('twit');
 var ko = require('knockout');
