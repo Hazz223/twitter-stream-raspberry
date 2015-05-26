@@ -13,10 +13,6 @@ var T = new Twit({
 
 var server = http.createServer(function(req, res) { 
 
-//
-//  filter the twitter public stream by the hashtag '#raspberrypi' and keyword
-//  'raspberry pi'
-//
 var stream = T.stream('statuses/filter', { track: ['#love', 'love'] });
 
 stream.on('tweet', function (tweet) {
