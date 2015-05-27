@@ -15,7 +15,15 @@ var twit = new Twit({
 });
 
 var stream = twit.stream('statuses/filter', {
-    track: '#love'
+    track: '#cat'
+});
+
+stream.on('connect', function () {
+    console.log('Connecting to Twitter stream...');
+});
+
+stream.on('connected', function () {
+    console.log('Connected to Twitter stream!!');
 });
 
 io.on('connection', function(socket) {
@@ -25,7 +33,7 @@ io.on('connection', function(socket) {
         console.log(tweet.text);
 
         io.emit('tweet', {
-            data: tweet.text
+            tweet: tweet
         });
     });
 

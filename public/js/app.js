@@ -1,5 +1,9 @@
 var socket = io();
 
-socket.on('tweet', function(tweet) {
-    console.log(tweet);
+var tweets = ko.observableArray();
+
+socket.on('tweet', function(data) {
+    tweets.push(data.tweet);
 });
+
+ko.applyBindings();
