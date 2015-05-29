@@ -9,9 +9,9 @@ app.use(express.static('public'));
 
 var twit = new Twit({
     consumer_key: '7zSD2wslmsXwwmOSUh0U0nMwX',
-    consumer_secret: 'hA1cLVnMRkMbMngsdbqgaMs4I1gqoOAn5nCv9lLIPrjjZNqudW',
+    consumer_secret: 'hA1cLVSECRET_KEY_GOES_HEREqoOSECRET_KEY_jZSECRE',
     access_token: '240623825-Vb63ja1xF0lW5d7wAcrTmzgi5QqJA5Pm2jMIWCD0',
-    access_token_secret: 'nGwTJeHWKh6Wd5sQKEHN4z2HdduGHqYay1fhbEm8EtSgc'
+    access_token_secret: 'nGwSECRET_KEY_GOES_HEREHdSECRET_KEYUbESECREc'
 });
 
 var stream = twit.stream('statuses/filter', {
