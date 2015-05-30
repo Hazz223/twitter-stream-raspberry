@@ -3,19 +3,15 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var Twit = require('twit');
+var config = require('./config');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-var twit = new Twit({
-    consumer_key: '7zSD2wslmsXwwmOSUh0U0nMwX',
-    consumer_secret: 'hA1cLVSECRET_KEY_GOES_HEREqoOSECRET_KEY_jZSECRE',
-    access_token: '240623825-Vb63ja1xF0lW5d7wAcrTmzgi5QqJA5Pm2jMIWCD0',
-    access_token_secret: 'nGwSECRET_KEY_GOES_HEREHdSECRET_KEYUbESECREc'
-});
+var twit = new Twit(config.twitter);
 
 var stream = twit.stream('statuses/filter', {
-    track: '#cat'
+    track: '#food'
 });
 
 stream.on('connect', function () {
@@ -29,16 +25,15 @@ stream.on('connected', function () {
 io.on('connection', function(socket) {
     console.log('new client connected');
 
-    stream.on('tweet', function(tweet) {
-        console.log(tweet.text);
-
-        io.emit('tweet', {
-            tweet: tweet
-        });
-    });
-
     socket.on('disconnect', function() {
         console.log('client disconnected');
+    });
+});
+
+stream.on('tweet', function(tweet) {
+    // console.log(tweet.text);
+    io.emit('tweet', {
+        tweet: tweet
     });
 });
 

@@ -5,9 +5,23 @@ body {
     background: -webkit-linear-gradient(top, #1381C5, #05B6A9);
     background-attachment: fixed;
     color: #FFFFFF;
+    font-size:19px;
 }
 blockquote.twitter-tweet {
 	display: none;
+}
+
+@media (min-height: 400px) {
+article {
+    -webkit-columns: 2 600px;
+    -webkit-column-gap: 0em;
+    -webkit-column-rule: 3px dotted #ddd;
+}
+
+.uploaded-media {
+	width:100%;
+    max-width:700px;
+    margin-bottom:20px;
 }
 
 h1 {
@@ -31,6 +45,7 @@ h1 {
     padding: 10px 10px;
     margin: 10px;
     min-height: 50px;
+    overflow: hidden;
 }
 
 .tweets-list-item + .tweets-list-item {
@@ -38,3 +53,8 @@ h1 {
     padding-top: 8px;
     
 }
+
+div.group {
+    display: inline-block;
+    width: 100%;
+ }

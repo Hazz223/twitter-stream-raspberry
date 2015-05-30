@@ -2,7 +2,7 @@ var socket = io();
 
 var tweets = ko.observableArray();
 
-var maxItems = 16;
+var maxItems = 8;
 var count = 0;
 
 socket.on('tweet', function(data) {
