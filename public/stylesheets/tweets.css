@@ -5,16 +5,17 @@ body {
     background: -webkit-linear-gradient(top, #1381C5, #05B6A9);
     background-attachment: fixed;
     color: #FFFFFF;
-    font-size:19px;
+    font-size:21px;
 }
+
 blockquote.twitter-tweet {
 	display: none;
 }
 
 @media (min-height: 400px) {
 article {
-    -webkit-columns: 2 600px;
-    -webkit-column-gap: 0em;
+    -webkit-columns: 4 500px;
+    -webkit-column-gap: 2em;
     -webkit-column-rule: 3px dotted #ddd;
 }
 
@@ -51,10 +52,9 @@ h1 {
 .tweets-list-item + .tweets-list-item {
     border-top: 1px solid #CCC;
     padding-top: 8px;
-    
 }
 
 div.group {
     display: inline-block;
     width: 100%;
- }
+}
