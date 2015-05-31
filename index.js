@@ -4,14 +4,18 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var Twit = require('twit');
 var config = require('./config');
+var path = require('path');
 
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.use('/js', express.static(path.join(__dirname, 'public/js')));
+app.use('/stylesheets', express.static(path.join(__dirname, 'public/stylesheets')));
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 var twit = new Twit(config.twitter);
+var hashtag = config.hashtag;
 
 var stream = twit.stream('statuses/filter', {
-    track: '#food'
+    track: hashtag
 });
 
 stream.on('connect', function () {
@@ -31,7 +35,6 @@ io.on('connection', function(socket) {
 });
 
 stream.on('tweet', function(tweet) {
-    // console.log(tweet.text);
     io.emit('tweet', {
         tweet: tweet
     });
