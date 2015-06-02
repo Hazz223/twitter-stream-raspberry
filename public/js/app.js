@@ -11,8 +11,6 @@ socket.on('tweet', function(data) {
     if (tweets().length > maxItems) {
         tweets.shift();
     }
-
-
 });
 
 ko.applyBindings();

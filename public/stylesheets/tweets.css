@@ -4,32 +4,28 @@ body {
     background: -ms-linear-gradient(top, #1381C5, #05B6A9);
     background: -webkit-linear-gradient(top, #1381C5, #05B6A9);
     background-attachment: fixed;
-    color: #FFFFFF;
+    color: #000;
     font-size:21px;
+
 }
 
 blockquote.twitter-tweet {
 	display: none;
 }
 
-@media (min-height: 400px) {
 article {
     -webkit-columns: 4 500px;
     -webkit-column-gap: 2em;
     -webkit-column-rule: 3px dotted #ddd;
 }
 
-.uploaded-media {
-	width:100%;
-    max-width:700px;
-    margin-bottom:20px;
-}
+
 
 h1 {
 	font-size: 24px;
 	margin: 0 0 15px 0;
 	line-height: 40px;
-	color: #FFF;
+	color: #000;
 	font-weight: normal;
 }
 
@@ -57,4 +53,60 @@ h1 {
 div.group {
     display: inline-block;
     width: 100%;
+}
+
+.tweets-list-item{
+  color: black;
+  background: #e3e3e3;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+width: 600px;
+
+}
+
+.tweet__user-image{
+  border: #fff solid 1px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding: 5px;
+  background: #fff;
+  margin:5px;
+}
+
+.tweet__user-media {
+    width 100%;
+    margin: 0 auto;
+}
+
+.tweet__user-media__container{
+  margin-bottom:20px;
+  width:100px;
+  border: #fff solid 1px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding: 5px;
+  background: #fff;
+  margin:5px;
+}
+
+.full-row{
+  height: 100%;
+}
+.twitter-feed{
+    background: white;
+    height: 100%;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+.twitter-feed__container{
+  height:100vh;
+}
+
+.tweet__user-name{
+  font-style: italic;
+  font-size:18px;
 }
