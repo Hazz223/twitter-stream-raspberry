@@ -82,7 +82,6 @@ width: 600px;
 
 .tweet__user-media__container{
   margin-bottom:20px;
-  width:100px;
   border: #fff solid 1px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -92,18 +91,32 @@ width: 600px;
   margin:5px;
 }
 
+.tweet__user-media__border{
+  width: 471px;
+  margin: 0 auto;
+}
+
+.tweet__user-media__img{
+  width: 100%;
+}
+
 .full-row{
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .twitter-feed{
     background: white;
-    height: 100%;
+    height: 80%;
+    display: block;
+    float: left;
+    position: absolute;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
 }
 .twitter-feed__container{
-  height:100vh;
+  height:100%;
 }
 
 .tweet__user-name{
