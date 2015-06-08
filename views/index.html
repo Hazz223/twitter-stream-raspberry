@@ -2,6 +2,7 @@
 <html>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="stylesheets/tweets.css"/>
 
     <head>
@@ -18,8 +19,7 @@
         <div class="row full-row">
           <div class="container twitter-feed">
             <div class="tweets-list" data-bind="foreach: tweets">
-
-              <div class="row tweets__tweet" data-bind="foreach: tweets">
+              <div class="row tweets__tweet">
                   <div class="col-md-12">
                     <img class="tweet__user-image" data-bind="attr:{src: user.profile_image_url}" />
                     <label class="tweet__user-name" data-bind="text: user.name"></label>

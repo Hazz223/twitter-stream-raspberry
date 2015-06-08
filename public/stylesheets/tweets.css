@@ -6,7 +6,7 @@ body {
     background-attachment: fixed;
     color: #000;
     font-size:21px;
-
+    font-family: 'Roboto', sans-serif;
 }
 
 blockquote.twitter-tweet {
@@ -18,8 +18,6 @@ article {
     -webkit-column-gap: 2em;
     -webkit-column-rule: 3px dotted #ddd;
 }
-
-
 
 h1 {
 	font-size: 24px;
@@ -57,11 +55,12 @@ div.group {
 
 .tweets-list-item{
   color: black;
-  background: #e3e3e3;
+  /*background: #e3e3e3;*/
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
 width: 600px;
+overflow: auto;
 
 }
 
@@ -82,12 +81,10 @@ width: 600px;
 
 .tweet__user-media__container{
   margin-bottom:20px;
-  border: #fff solid 1px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
   padding: 5px;
-  background: #fff;
   margin:5px;
 }
 
@@ -102,11 +99,9 @@ width: 600px;
 
 .full-row{
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 .twitter-feed{
-    background: white;
+    /*background: white;*/
     height: 80%;
     display: block;
     float: left;
@@ -122,4 +117,15 @@ width: 600px;
 .tweet__user-name{
   font-style: italic;
   font-size:18px;
+  color: #e3e3e3;
+  text-decoration: underline;
+}
+
+.tweets__tweet{
+  display: block;
+  overflow: auto;
+}
+
+.tweet__user-tweet{
+  color: #e3e3e3;
 }
